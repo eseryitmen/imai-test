@@ -11,7 +11,7 @@ import { ConfigModule } from '@nestjs/config';
       validate: (config) => {
         if (!config['AUTH']) {
           throw new NotFoundException(
-            'Configuration error. AUTH not found. Please add an env variable AUTH.',
+            'Configuration error. AUTH not found. Please add the env variable AUTH.',
           );
         }
         return config;
