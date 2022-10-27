@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="image">
+        <img [attr.src]="profile.profile_image_link | igImage | async" />
+    </div>
+    <div class="info">
+        <div class="handle">
+            {{ profile.account }}
+            <img *ngIf="profile.is_verified" class="verified" src="/assets/verified.png">
+        </div>
+        <div class="details">
+            <div class="detail">
+                <strong>{{ profile.posts_count | shortNum }}</strong> posts
+            </div>
+            <div class="detail">
+                <strong>{{ profile.followers | shortNum }}</strong> followers
+            </div>
+            <div class="detail">
+                <strong>{{ profile.following | shortNum }}</strong> following
+            </div>
+        </div>
+        <div class="profile_name">
+            {{ profile.profile_name }}
+        </div>
+        <div class="biography">
+            {{ profile.biography }}
+        </div>
+        <div class="external_url">
+            <a [href]="profile.external_url" target="_blank">
+                {{ profile.external_url }}
+            </a>
+        </div>
+    </div>
+</div>

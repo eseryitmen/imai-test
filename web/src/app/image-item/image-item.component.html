@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="image">
+        <img [attr.src]="image.thumbnail_src | igImage | async" class="image" [class.darken]="hover" />
+    
+        <ng-container *ngIf="image.media_type === 'Carousel'">
+            <img src="/assets/carousel.svg" class="media_type">
+        </ng-container>
+    
+        <ng-container *ngIf="image.media_type === 'Reels'">
+            <img src="/assets/reels.svg" class="media_type">
+        </ng-container>
+    </div>
+
+    <ng-container *ngIf="hover">
+        <div class="likes-comments">
+            <div class="likes">
+                <img src="/assets/heart.svg">
+                <div class="text">
+                    {{ image.likes | shortNum }}
+                </div>                
+            </div>
+            <div class="comments">
+                <img src="/assets/comment.svg">
+                <div class="text">
+                    {{ image.comments | shortNum }}
+                </div>                
+            </div>
+        </div>
+    </ng-container>
+</div>
+

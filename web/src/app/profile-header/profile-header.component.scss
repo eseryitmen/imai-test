@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    width: 100%;
+    column-gap: 8px;
+
+    .image {
+        padding: 30px;        
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+
+        img {        
+            border-radius: 50%;
+            width: 200px;
+        }
+    }
+
+    .info {
+        padding: 30px;
+        width: 70%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: start;
+
+        .handle {
+            font-size: 28px;
+            width: 100%;
+
+            .verified {
+                width: 20px;
+            }
+        }
+
+        .details {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            padding-top: 30px;
+            width: 100%;
+
+            .detail {
+                min-width: 200px;
+            }
+        }
+
+        .profile_name {
+            margin-top: 30px;
+            width: 100%;
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+        .biography {
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .external_url {
+            margin-top: 10px;
+            width: 100%;
+        }
+    }
+}
+
+
